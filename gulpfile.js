@@ -18,4 +18,3 @@ export function dev(){
     watch('src/scss/**/*.scss', css);
 }
 
-export const build = series(css);
