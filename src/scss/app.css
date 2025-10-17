@@ -100,8 +100,7 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -348,6 +347,11 @@ template {
   flex-direction: initial;
 }
 
+.main {
+  width: 80%;
+  margin: 0 auto;
+}
+
 a {
   text-decoration: none;
-}/*# sourceMappingURL=app.css.map */
+}
