@@ -12,7 +12,7 @@ export function css(done){
 }
 
 
-export function dev(){
+export function build(){
     watch('src/scss/**/*.scss', css);
 }
 
