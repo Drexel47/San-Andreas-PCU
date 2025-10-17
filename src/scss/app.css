@@ -334,4 +334,20 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+.nav-general {
+  display: flex;
+  background-color: #3281F2;
+  color: white;
+}
+.nav-general a {
+  color: white;
+}
+.nav-izquierda {
+  flex-direction: initial;
+}
+
+a {
+  text-decoration: none;
 }/*# sourceMappingURL=app.css.map */

@@ -5,7 +5,17 @@
 {
 
     &-general{
+        display: flex;
+
         background-color: v.$primario;
-        height: 3rem;
+        color: white;
+        a{
+            color: white;
+        }
+    
     }
+    &-izquierda{
+       flex-direction: initial;
+    }
+    
 }

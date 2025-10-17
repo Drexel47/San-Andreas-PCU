@@ -14,6 +14,18 @@
     transform: translateX(-130%);
   } /* Se mueve a la izquierda hasta desaparecer */
 }
+._svg-blanco {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(78deg) brightness(101%) contrast(109%);
+}
+
+._svg-secundario {
+  filter: brightness(0) saturate(100%) invert(53%) sepia(94%) saturate(1942%) hue-rotate(7deg) brightness(96%) contrast(89%);
+}
+
+._svg-secundario50 {
+  filter: brightness(0) saturate(100%) invert(84%) sepia(43%) saturate(1161%) hue-rotate(324deg) brightness(101%) contrast(102%);
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -321,4 +333,20 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+.nav-general {
+  display: flex;
+  background-color: #3281F2;
+  color: white;
+}
+.nav-general a {
+  color: white;
+}
+.nav-izquierda {
+  flex-direction: initial;
+}
+
+a {
+  text-decoration: none;
 }
