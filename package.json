@@ -1,0 +1,22 @@
+{
+  "name": "sasv",
+  "version": "1.0.0",
+  "description": "PCU de un servidor SAMP/Open.mp",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/scss:build/css",
+    "dev": "gulp dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Drexel47"
+  },
+  "author": "Ignacio Pizarro",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.93.2"
+  }
+}
