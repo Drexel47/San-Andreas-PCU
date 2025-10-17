@@ -9,7 +9,7 @@ export function css(done){
         .pipe(sass({
             includePaths: ['scss']
         }).on('error', sass.logError))
-        .pipe(dest('build/css'))
+        .pipe(dest('src/css'))
     done();
 }
 

@@ -1,26 +1,53 @@
+//Fonts
+$SA_Font : 'Pricedown Bl', sans-serif;
+$Montserrat: "Montserrat", sans-serif;
+$Play: 'Play', sans-serif;
+
 //Colores
-$color_principal: #494FC1;
-$color_secundario: #EFFAFD;
-$color_terciario: #ABE5F5;
+$primario: #3281F2;
+$secundario: #D6850E;
+$secundarioOscuro: rgb(233,287,2);
+$verde: #32de84;
+$blanco: #FFF;
+$negro: #000;
+$verdeOscuro: #04AA6D;
+$rojo: #f44336;
+$gris: #e7e7e7;
+$gold: #ffd700;
+$primario_drk: #1463D4;
+$grove-st :#00541B;
 
+//---svg color
+$svg-blanco: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(78deg) brightness(101%) contrast(109%);
+$svg-secundario: brightness(0) saturate(100%) invert(53%) sepia(94%) saturate(1942%) hue-rotate(7deg) brightness(96%) contrast(89%);
+$svg-sec50: brightness(0) saturate(100%) invert(84%) sepia(43%) saturate(1161%) hue-rotate(324deg) brightness(101%) contrast(102%);
+._svg-blanco{
+    filter: $svg-blanco;
+}
+._svg-secundario{
+    filter: $svg-secundario;
+}
+._svg-secundario50{
+    filter: $svg-sec50;//#FFB740
+}
+//Sombreados
+$SaFont_b: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
+1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
 
-$color_bsec:#062A34;
-$color_bsec1: #0B4F62;
-//Fuente
-$color_fuente: #f2fbfd;
-//Tamaños Fuente
+//Tamaños fuente
+$T30: 3rem;
+$T28: 2.8rem;
+$T26: 2.6rem;
+$T24: 2.4rem;
+$T20: 2rem;
+$T18: 1.8rem;
+$T16: 1.6rem;
+$T14: 1.4rem;
+$T12: 1.2rem;
 
-$titulo_gral: 4rem;
-$titulo_seccion: 2.4rem;
-
-
-
-//Text Shadows
-
-$txt_shadow1: 1px 1px 1px rgba(0,0,0,.5);
 //Media Queries
 $telefono: 480px;
-$telefono_vertical: 768px;
-$tablet: 834px;
-$tablet_vertical: 1024px;
-$desktop: 1440px;
+$telefono-l: 600px;
+$tablet: 768px;
+$desktop: 1080px;
+$desktopXL: 1440px;
