@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicia Sesión</title>
+    <!--Fonts-->
+    <!--Montserrat-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--Pricedown-->
+    <link href="https://fonts.cdnfonts.com/css/pricedown" rel="stylesheet">
+    <!--SCSS/CSS-->
+    <link rel="stylesheet" href="/build/css/app.css">
+    
+</head>
+<body class="login">
+    <header class="header">
+        <div class="nav2 contenido-header">
+            <div class="barra">
+                <div class="izquierda">
+                    <a class="regresar" href="/index.html"><img src="/src/icons/arrow-left1.svg" alt="icono_izq" class="_icon _svg-blanco">Volver al Inicio</a>
+                </div>
+            </div> 
+        </div>
+    </header>
+    <main class="_login">
+        <section class="login-form">
+            <div class="_login-form">
+                <h4 class="txt-shw _login-color">Ingresa</h4>
+                <form class="formulario" action="validar_user.php" method="post">
+                    <fieldset>
+                            
+                        <div class="contenedor-campos">
+                            <div class="campo">
+                                <label class="_form-title txt-shw">Nombre</label>
+                                <input class="input-text" type="text" id="usuario" name="usuario" placeholder="Nombre_Apellido" required>
+                            </div>
+                            <div class="campo">
+                                <label class="_form-title txt-shw">Contraseña</label>
+                                <input class="input-text" type="password" name="log_password" value="" placeholder="Contraseña" required>
+                                
+                            </div>
+                        </div>
+                        <input class="_boton" type="submit" name="log_user" value="Entrar"> 
+                    </fieldset>
+                               
+                </form>
+                <div class="form-options _login-color">
+                    <div class="_form-options  _bold-600">
+                        <a class="_account recovery-account" href="recovery.html">¿Olvidaste la contraseña?</a>
+                        <span class="_account _bold-600">¿No tienes cuenta?<a href="/pages/registrar.html" class="_account-login">Click Aquí</a></span>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+    <footer class="footer">
+        <span>Todos los derechos reservados. 2024</span>
+    </footer>
+</body>
+</html>

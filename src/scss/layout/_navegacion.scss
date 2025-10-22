@@ -9,13 +9,29 @@
 
         background-color: v.$primario;
         color: white;
+
+        height: 3rem;
         a{
             color: white;
+        }
+
+        .barra{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+
+            margin: 0 1rem;
         }
     
     }
     &-izquierda{
-       flex-direction: initial;
+       
+    }
+
+    &-principal{
+        display: flex;
+        gap: 1rem;
     }
     
 }

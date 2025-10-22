@@ -13,3 +13,14 @@
   0% { transform: translateX(105%); } /* Empieza a la derecha del contenedor */
   100% { transform: translateX(-130%); } /* Se mueve a la izquierda hasta desaparecer */
 }
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

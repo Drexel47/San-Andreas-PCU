@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Vehículos</title>
+    <!--Fonts-->
+    <!--Montserrat-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--Pricedown-->
+    <link href="https://fonts.cdnfonts.com/css/pricedown" rel="stylesheet">
+    <!--SCSS/CSS-->
+    <link rel="stylesheet" href="/build/css/app.css">
+
+    <!--Frameworks-->
+    
+    
+</head>
+<body>
+    <header class="header">
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a class="/">
+                    <img src="/src/img/icon.png" alt="PLRp">
+                </a>
+
+                <div class="derecha">
+                    <nav class="nav-principal">
+                        <a class="hover-link" href="">Cerrar Sesión</a>
+                        
+                       
+                    </nav>  
+                </div>
+    
+               
+    
+            </div>
+            
+        </div>   
+    </header>
+    <main class="user_cars shadow">
+        <div class="barra1">
+            <nav class="nav-secundario">
+                <a href="/pages/pcu.html" class="_mi-cuenta"><img src="/src/icons/user-icon.svg" alt="">Mi Cuenta</a>
+                    
+                    <a href="/pages/mis-vehiculos.html" class="._mis-vehiculos">
+                        <img src="/src/icons/Car.svg" alt="icono vehiculos">Vehículos</a>
+                    <a href="/pages/tienda.html" class="_mis-propiedades">
+                        <img src="/src/icons/Store.svg" alt="icono tienda">Propiedades</a>
+                    <a href="/pages/tienda.html" class="_tienda">
+                        <img src="/src/icons/Store.svg" alt="icono tienda">Tienda</a>
+                    <a href="/pages/comprar_coins.html" class="_coins">
+                        <img src="/src/icons/Coin.svg" alt="icono coins">Coins</a>
+                    <a href="/pages/otro.html" class="_otro">
+                        <img src="/src/icons/More.svg" alt="icono otro">Otros
+                    </a>
+                
+            </nav>
+        </div>
+        <section class="user_cars_info">
+            
+            <div class="user_cars_detail">
+                <div class="cars__info">
+                    <h4 class="user_cars_title">Mis Vehículos</h4>
+                    <span class="user_cars_count">
+                        Usted tiene "" vehículos
+                    </span>
+                </div>
+
+                <div class="">
+                    <table class="_car-table">
+                        <thead class="_car-header">
+                            <tr>
+                                <th scope="col" class="_car-id">ID</th>
+                                <th scope="col" class="_model">Modelo</th>
+                                <th scope="col" class="_timeLeft">Vence en:</th>
+                                <th scope="col" class="_renovation">Renovar por:</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="_car-body">
+                            <tr>
+                                <th class="_car-id-user" scope="row">1</th>
+                                <td class="_model-user"><img src="/src/img/cars/516.png" alt="car image"></td>
+                                <td class="_timeLeft-user"><span class="car_timeLeft">2 dias, 14 horas y 27 minutos</span></td>
+                                <td class="_renovation-user">
+                                  <div class="car_renovation_payment">
+                                      <div class="_costo-fijo"><span class="item_stat">Costo Fijo: </span><span class="item_value">$4500</span></div>
+                                      <div class="_intereses"><span class="item_stat">Intereses</span> <span class="item_value">$3000</span></div>
+                                      <div class="_total-renovacion"><span class="item_stat">Total: </span> <span class="item_value">$7500</span></div>
+                                      
+                                      <select class="_metodo-pago form-select">
+                                          <option value="0" disabled>Selecciona:</option>
+                                          <option value="banco">Banco ($20.000)</option>
+                                          <option value="cheque">Cheque ($12.000)</option>
+                                      </select>
+                                      <button class="_boton-pagar" type="submit">Pagar</button>
+          
+                                  </div>
+  
+                              </tr>
+
+                              </tbody>
+
+                </div>
+
+            </div>
+            
+            
+
+        </section>
+        <section class="car_ads">
+            <div class="ads_title">
+                <h3 class="car_ads_title">Publicidad</h3>
+            </div>
+            <div class="ad_container">
+                <div class="car_ads_card">
+                    <img src="/src/img/Ads/ad1.png" alt="" class="car_ads_card">
+                    <a href="mis-vehiculos.html" class="btn_details">Ver más...</a>
+                </div>
+                <div class="car_ads_card">
+                    <img src="/src/img/Ads/ad2.png" alt="" class="car_ads_card">
+                    <a href="mis-vehiculos.html" class="btn_details">Ver más...</a>
+                </div>
+                <div class="car_ads_card">
+                    <img src="/src/img/Ads/ad3.png" alt="" class="car_ads_card">
+                    <a href="mis-vehiculos.html" class="btn_details">Ver más...</a>
+                </div>
+                <div class="car_ads_card">
+                    <img src="/src/img/Ads/ad4.webp" alt="" class="car_ads_card">
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+    <footer class="footer">
+        <span>Todos los derechos reservados. 2024</span>
+    </footer>
+    <!--Scripts-->
+   <!--Scripts-->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

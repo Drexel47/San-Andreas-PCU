@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <!--Fonts-->
+    <!--Montserrat-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--Pricedown-->
+    <link href="https://fonts.cdnfonts.com/css/pricedown" rel="stylesheet">
+    <!--SCSS/CSS-->
+    <link rel="stylesheet" href="/build/css/app.css">
+
+    <!--Frameworks-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+</head>
+<body class="background-coins">
+    <header class="header">
+        <div class="nav2 contenido-header">
+            <div class="barra">
+                <a class="/" href="/index.html">
+                    <img class="_icon" src="/src/img/icon.png" alt="PLRp">
+                </a>
+
+                <div class="derecha">
+                    <nav class="nav-principal _bold-600">
+                        <a class="hover-link" href="">Cerrar Sesión</a>
+                        
+                       
+                    </nav>  
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="tienda">
+        <div class="barra1">
+            <div class="menu-movil">
+                <img src="/src/icons/btn_hamburguesa.svg" alt="icono movil">
+            </div>
+            <nav class="nav-secundario _bold-600">
+                <div class="_mi-cuenta">
+                    <a href="/pages/pcu.html"><img src="/src/icons/user-icon.svg" class="_gris _icon" alt="icono cuenta">Mi Cuenta</a>
+                </div>
+                <div class="_mis-vehiculos">
+                    
+                    <a href="/pages/mis-vehiculos.html"><img src="/src/icons/Car.svg" class="_gris _icon"alt="icono vehiculos">Vehículos</a>
+                </div>  
+                <div class="_mis-propiedades">
+                    <a href="/pages/propiedades.html"><img src="/src/icons/house.svg" class="_gris _icon" alt="icono tienda">Propiedades</a>
+                </div>
+                <div class="_tienda">
+                    <a href="/pages/tienda.html" ><img src="/src/icons/Store.svg" class="_gris _icon"alt="icono tienda">Tienda</a>
+                </div>
+                <div class="_coins">
+                    <a href="/pages/comprar_coins.html" ><img src="/src/icons/Coin.svg" class="_gris _icon" alt="icono coins">Coins</a>
+                </div>
+                <div class="_otro">
+                    <a href="/pages/otro.html" ><img src="/src/icons/More.svg" class="_gris _icon" alt="icono otro">Otros</a>
+                </div>
+                
+                
+            </nav>
+        </div>
+        </div>
+        <div class="tienda-descripcion">
+            <h4 class="titulo-tienda _section-title _bold">Tienda</h4>
+            <p class="descripcion-tienda _section-description">
+                Aquí encontrarás todos los productos que ofrecemos para tu cuenta.
+            </p>
+            <p class="_cantidad-coins-text">Actualmente, tienes <span class="_cantidad-coins _bold-600">0</span> coins.</p>
+        </div>
+        
+        
+        
+        <section class="tienda-vip">
+            <div class="producto">
+                <h5 class="titulo-producto _item-title _bold-600">Vip</h5>
+            </div>
+            <div class="tienda-detalle vip">
+                
+                <div class="card card-detalle card-rounded">
+                    
+                        <img src="/src/icons/vip.svg" alt="vip-icon" class="">
+                        <h4 class="_item-title _bold-600">Vip</h4>
+                        <div class="item_desc">
+                            <ul class="lista-beneficios">
+                                <li class="lista-texto">
+                                    <div class="_item-beneficio">
+                                        Duracion:<span class="_bold">30</span> días.
+                                    </div>
+                                </li>
+                                <li class="lista-texto">
+                                    <div class="__objetos">
+                                        Nombre <span class="coin-color txt-shw">Dorado</span>
+                                    </div>
+                                </li>
+                                <li class="lista-texto">
+                                    <div class="__objetos">
+                                        Editar colores en <span class="link_objetos _link">/Objetos</span>
+                                    </div>
+                                </li>
+            
+                                <li class="lista-texto">
+                                    <div class="__objetos">
+                                        <span class="money-color _bold-600 txt-shw">+250</span> en cada pago diario.
+                                    </div>
+    
+                                </li>
+                                <li class="lista-texto">
+                                    <div class="_item-beneficio">
+                                        Limite de casas: <span class="_bold-600">2</span>
+                                    </div>
+                                </li>
+                                <li class="lista-texto">
+                                    <div class="_item-beneficio">
+                                        Limite de Negocios: <span class="_bold-600">2</span>
+                                    </div>
+                                </li>
+                                <li class="lista-texto">
+                                    <div class="_item-beneficio">
+                                        Limite de Vehículos: <span class="_bold-600">2</span>
+                                    </div>
+                                </li>
+                                <li class="lista-texto">
+                                    <div class="_item-beneficio">
+                                        Copias de Llaves: <span class="_bold-600">2</span>
+                                    </div>
+                                </li>
+                                <li class="lista-texto">
+                                    <div class="_item-beneficio">
+                                        Respawn de coches: <span class="_bold-600">35 minutos</span>
+                                    </div>
+                                </li>
+                                <!--<li class="lista-texto"></li>-->
+                            </ul>       
+                        </div>
+                        <button type="button" class="btn btn-outline-success boton_comprar">Comprar (5 Coins)</button>
+                </div>
+                <div class="card card-detalle card-rounded">
+                    
+                    <img src="/src/icons/vip2.svg" alt="vip-icon" class="">
+                    <h4 class="_item-title _bold-600">Vip 2</h4>
+                    <div class="item_desc">
+                        <ul class="lista-beneficios">
+                            <li class="lista-texto">
+                                <div class="_item-beneficio">
+                                    Duracion:<span class="_bold-600">30</span> días.
+                                </div>
+                            </li>
+                            <li class="lista-texto">
+                                <div class="__objetos">
+                                    Nombre <span class="coin-color txt-shw">Dorado</span>
+                                </div>
+                            </li>
+                            <li class="lista-texto">
+                                <div class="__objetos">
+                                    Editar colores en <span class="link_objetos _link">/Objetos</span>
+                                </div>
+                            </li>
+                            <li class="lista-texto">
+                                <div class="__objetos">
+                                    Editar objetos en <span class="link_objetos _link">/Objetos</span>
+                                </div>
+                            </li>
+                            <li class="lista-texto">
+                                <div class="__objetos">
+                                    <span class="money-color _bold-600 txt-shw">+450</span> en cada pago diario.
+                                </div>
+
+                            </li>
+                            <li class="lista-texto">
+                                <div class="_item-beneficio">
+                                    Limite de casas: <span class="_bold-600">4</span>
+                                </div>
+                            </li>
+                            <li class="lista-texto">
+                                <div class="_item-beneficio">
+                                    Limite de Negocios: <span class="_bold-600">3</span>
+                                </div>
+                            </li>
+                            <li class="lista-texto">
+                                <div class="_item-beneficio">
+                                    Limite de Vehículos: <span class="_bold-600">4</span>
+                                </div>
+                            </li>
+                            <li class="lista-texto">
+                                <div class="_item-beneficio">
+                                    Copias de Llaves: <span class="_bold-600">4</span>
+                                </div>
+                            </li>
+                            <li class="lista-texto">
+                                <div class="_item-beneficio">
+                                    Respawn de coches: <span class="_bold-600">25 minutos</span>
+                                </div>
+                            </li>
+                            <!--<li class="lista-texto"></li>-->
+                        </ul>    
+                    </div>
+                    <button type="button" class="btn btn-outline-success boton_comprar">Comprar (10 Coins)</button>
+            </div>
+            </div>
+        </section>
+        <section class="tienda-vehiculos">
+            <div class="producto">
+                <h5 class="titulo-producto _item-title _bold">Vehículos</h5>
+            </div>
+            <div class="tienda-detalle _vehiculos">
+                <div class="card card-detalle card-rounded">
+                    
+                    <img src="/src/img/cars_2/Monster-A.webp" alt="monster_store" class="_vehicle-img">
+                    <h4 class="_item-title _bold-600">Monster A</h4>
+                    <span class="item_desc">
+                        <ul class="_veh-stats">
+                            <li class="_veh-desc">
+                                <div class="_veh-info">
+                                    Velocidad Máxima: <span class="_bold-600">94 km/h</span>
+                                </div>
+
+                            </li>
+                            <li class="_veh-desc">
+                                <div class="_veh-info">
+                                    Cerrajeable: <span class="_bold-600">No</span>
+                                </div>
+                            </li>
+                            <li class="_veh-desc">
+                                <div class="_veh-info">
+                                    Precio: <span class="_bold-600">100 Coins</span>
+                                </div>
+                                
+                            </li>
+                        </ul>
+                        
+                    </span>
+                    <button type="button" class="btn btn-outline-success boton_comprar">Comprar</button>
+                </div>
+                <div class="card card-detalle card-rounded">
+                    
+                    <img src="/src/img/cars_2/Bloodring.webp" alt="monster_store" class="_vehicle-img">
+                    <h4 class="_item-title _bold-600">Bloodring Banger</h4>
+                    <span class="item_desc">
+                        <ul class="_veh-stats">
+                            <li class="_veh-desc">
+                                <div class="_veh-info">
+                                    Velocidad Máxima: <span class="_bold-600">116 km/h</span>
+                                </div>
+
+                            </li>
+                            <li class="_veh-desc">
+                                <div class="_veh-info">
+                                    Cerrajeable: <span class="_bold-600">No</span>
+                                </div>
+                            </li>
+                            <li class="_veh-desc">
+                                <div class="_veh-info">
+                                    Precio: <span class=" _bold-600">50 Coins</span>
+                                </div>
+                                
+                            </li>
+                        </ul>
+                        
+                    </span>
+                    <button type="button" class="btn btn-outline-success boton_comprar">Comprar</button>
+                </div>
+                <div class="card card-detalle card-rounded">
+                    
+                    <img src="/src/img/cars_2/HotringRacer2.webp" alt="monster_store" class="_vehicle-img">
+                    <h4 class="_item-title _bold-600">Hotring Racer B</h4>
+                    <span class="item_desc">
+                        <ul class="_veh-stats">
+                            <li class="_veh-desc">
+                                <div class="_veh-info">
+                                    Velocidad Máxima: <span class="_bold-600">187 km/h</span>
+                                </div>
+
+                            </li>
+                            <li class="_veh-desc">
+                                <div class="_veh-info">
+                                    Cerrajeable: <span class="_bold-600">No</span>
+                                </div>
+                            </li>
+                            <li class="_veh-desc">
+                                <div class="_veh-info">
+                                    Precio: <span class="_bold-600">70 Coins</span>
+                                </div>
+                                
+                            </li>
+                        </ul>
+                        
+                    </span>
+                    <button type="button" class="btn btn-outline-success boton_comprar">Comprar</button>
+                </div>
+                
+                
+            </div>
+        </section>
+        <section class="tienda-cosmeticos">
+            <div class="producto">
+                <h5 class="titulo-producto _item-title _bold">Cosmeticos</h5>
+            </div>
+            <div class="tienda-detalle">
+                
+                <div class="card card-detalle card-rounded">
+                    
+                    <img src="/src/img/Cosmeticos/trucker_hat.jpg" alt="trucker_hat" class="_cloth-img">
+                    <h4 class="_item-title _bold-600">Gorra de Camionero</h4>
+                    <span class="item_desc _item-price _bold-600">2 Coins</span>
+                    <button type="button" class="btn btn-outline-success boton_comprar">Comprar</button>
+                </div>
+                <div class="card card-detalle card-rounded">
+                    
+                    <img src="/src/img/Cosmeticos/casco_balnco.jpg" alt="helmet_1" class="_cloth-img">
+                    <h4 class="_item-title _bold-600">Casco Blanco</h4>
+                    <span class="item_desc _item-price _bold-600">4 Coins</span>
+                    <button type="button" class="btn btn-outline-success boton_comprar">Comprar</button>
+                </div>
+                <div class="card card-detalle card-rounded">
+                    
+                    <img src="/src/img/Cosmeticos/hockey1.jpg" alt="hockey_1" class="_cloth-img">
+                    <h4 class="_item-title _bold-600">Máscara Hockey 1</h4>
+                    <span class="item_desc _item-price _bold-600">4 Coins</span>
+                    <button type="button" class="btn btn-outline-success boton_comprar">Comprar</button>
+                </div>
+                <div class="card card-detalle card-rounded">
+                    
+                    <img src="/src/img/Cosmeticos/peluca3.jpg" alt="hair3" class="_cloth-img">
+                    <h4 class="_item-title _bold-600">Peluca 3</h4>
+                    <span class="item_desc _item-price _bold-600">7 Coins</span>
+                    <button type="button" class="btn btn-outline-success boton_comprar">Comprar</button>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <span>Todos los derechos reservados. 2024</span>
+    </footer>
+    <!--Scripts-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/js/app.js"></script>
+    
+</body>
+</html>

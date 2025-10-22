@@ -1,0 +1,86 @@
+@use '../base/keyframes';
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  &.activo {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+  }
+
+    &_contenido
+    {
+        background: #fff;
+        background: #fff;
+        padding: 2rem;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 400px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        animation: slideIn 0.3s ease;
+
+        p, button{
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.modal__contenido {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  animation: slideIn 0.3s ease;
+
+  p, button{
+    font-size: 1.4rem;
+  }
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.acciones {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.btn-primario {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+
+  &:hover { background: #0056b3; }
+}
+
+.btn-secundario {
+    background: red;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    color: whitesmoke;
+    &:hover { background: #aaa; }
+}
+

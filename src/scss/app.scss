@@ -1,7 +1,69 @@
 @forward 'base';
 @forward 'layout';
+@use 'base/variables' as v;
+
 
 
 a{
     text-decoration: none;
 }
+
+body{
+    min-height: 100vh;
+}
+main{
+    min-height: calc(100vh - 6rem);
+}
+li{
+    list-style: none;
+}
+
+.server-stats{
+    display: flex;
+    flex-direction: row;
+
+    .players, .update-log{
+        width: 50%;
+    }
+}
+
+.mas-info{
+
+    display: flex;
+    //background-color: v.$primario;
+    width: 100%;
+    .sobre-nosotros{
+        max-width: 60%;
+    }
+    .seguirnos{
+        width: 40%;
+    }
+}
+
+.sobre-nosotros, .seguirnos{
+    h4{
+        color: wheat;
+        background: v.$primario;
+        
+    }
+}
+
+
+.presentacion-servidor{
+
+    &-video{
+        height: 36rem;
+    }
+}
+
+
+//Footer
+
+footer{
+    background: v.$primario;
+    height: 3rem;
+
+    text-align: center;
+    
+}
+
