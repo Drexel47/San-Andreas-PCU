@@ -1,8 +1,120 @@
 @forward 'navegacion';
 @forward 'modal';
+@forward 'botones';
+@forward 'iconos';
+@forward 'carrusel';
 
-.main{
-    width: 80%;
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+body{
+    width: 100%;
     margin: 0 auto;
+    background: v.$secundarioClaro;
+    color: black;
+    transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
+   
+    &.dark-mode
+    {
+        background: v.$oscuro;
+
+        li, span{
+            color: v.$secundarioClaro;
+        }
+    }
+}
+
+header
+{
+    background: v.$primario;
+}
+
+main{
     
+    @include m.w-desktop{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+
+
+.sobre-nosotros, .seguirnos{
+    h4{
+        color: v.$secundarioClaro;
+        background: v.$primario;
+        
+    }
+}
+
+
+.presentacion-servidor{
+
+    &-video{
+        height: 36rem;
+    }
+}
+
+//Secciones
+
+
+.server-stats, .mas-info{
+    display: flex;
+
+    flex-direction: column;
+    @include m.w-desktop{
+        flex-direction: row;
+    }
+    width: 100%;
+}
+.mas-info
+{
+    .sobre-nosotros
+    {
+        width: 100%;
+        @include m.w-desktop{
+            width: 70%;
+        }
+    }
+    .seguirnos{
+        width: 100%;
+        @include m.w-desktop{
+            width: 30%;
+        }
+
+        .redes-sociales
+        {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 1rem;
+        }
+    }
+
+}
+.server-stats
+{
+    .players, .update-log{
+        width: 100%;
+        @include m.w-desktop{
+            width: 50%;
+        }
+        
+    }
+}
+
+//Footer
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 3rem;
+    font-weight: bolder;    
+    text-align: center;
+
+    background: v.$primario;
+    color: v.$secundarioClaro;
 }

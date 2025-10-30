@@ -1,4 +1,7 @@
 @use '../base/keyframes';
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
 .modal {
   display: none;
   position: fixed;
@@ -11,13 +14,14 @@
   &.activo {
     display: flex;
     animation: fadeIn 0.3s ease;
+    overflow-y: hidden;
   }
 
     &_contenido
     {
         background: #fff;
         background: #fff;
-        padding: 2rem;
+        padding: 1rem;
         border-radius: 10px;
         width: 90%;
         max-width: 400px;
@@ -30,9 +34,9 @@
     }
 }
 
-.modal__contenido {
+.modal_contenido {
   background: #fff;
-  padding: 2rem;
+  //padding: 2rem;
   border-radius: 10px;
   width: 90%;
   max-width: 400px;
@@ -40,8 +44,19 @@
   animation: slideIn 0.3s ease;
 
   p, button{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
+
+  .titulo-secundario
+  {
+    display: flex;
+    justify-content: center;
+    img{
+      height: 2.4rem;
+      width: auto;
+    }
+  }
+
 }
 
 .campo {
@@ -62,25 +77,5 @@ input {
   gap: 1rem;
 }
 
-.btn-primario {
-  background: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 0.6rem 1rem;
-  cursor: pointer;
 
-  &:hover { background: #0056b3; }
-}
-
-.btn-secundario {
-    background: red;
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    padding: 0.6rem 1rem;
-    cursor: pointer;
-    color: whitesmoke;
-    &:hover { background: #aaa; }
-}
 

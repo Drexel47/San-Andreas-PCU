@@ -1,0 +1,61 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+//Modo oscuro
+.modo-btn {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  padding: 0;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+
+  margin-top: .1rem;
+}
+
+//Botones genericos
+
+.btn-primario {
+  background: v.$primario;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+
+  &:hover { background: v.$primario_drk }
+}
+
+.btn-secundario {
+    background: v.$rojo_sec;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    color: whitesmoke;
+
+    transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
+
+    
+    transition: font-weight 0.4s ease;
+    @include m.w-desktop
+    {
+      display: block;
+      margin: 0 auto;
+      width: 50%;
+      
+    }
+    &:hover { 
+        font-weight: bold;
+        background: v.$rojo_sec1; 
+    }
+}

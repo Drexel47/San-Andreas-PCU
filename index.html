@@ -20,11 +20,11 @@
 </head>
 <body class="main">
     <header class="header">
-        <div class="nav-general contenido-header">
+        <nav class="nav-general contenido-header">
             <div class="barra">
                 <div class="nav-izquierda">
                     <a class="/">
-                        <img class="_icon" src="src/img/icon.png" alt="PLRp">
+                        <img class="logo-icon" src="src/img/icon.png" alt="PLRp">
                     </a>
                 </div>
 
@@ -32,24 +32,46 @@
                 <nav class="nav-principal">
                     <a class="nav_log" href="pages/login.html">Ingresa</a>
                     <a class="nav_reg" href="" btn-reg-op = "aviso-registro">Registrate</a>   
+
+                    
+                    <button id="btn-darkmode" class="modo-btn" aria-label="Cambiar tema">
+                        <svg class="icono icono-sol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"/>
+                            <line x1="12" y1="1" x2="12" y2="3"/>
+                            <line x1="12" y1="21" x2="12" y2="23"/>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                            <line x1="1" y1="12" x2="3" y2="12"/>
+                            <line x1="21" y1="12" x2="23" y2="12"/>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                        </svg>
+
+                        <svg class="icono icono-luna" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 0 1 11.21 3 7 7 0 1 0 21 12.79z"/>
+                        </svg>
+                    </button>
+                    
                 </nav>  
                 
-    
+                
                
     
             </div>
-            
-        </div>
-        
-           
+        </nav>  
  
     </header>
     <main class="contenido-principal">
         
             <div class="modal" id="aviso-registro">
                 <div class="modal_contenido">
-                     <h3 class="titulo-1">Información</h3>
-                    <p class="texto-registro">Para registrar un usuario, debes hacerlo desde el cliente SAMP/Open.mp</p>
+                    <div class="titulo-secundario">
+                        <img src="./src/icons/circle-alert.svg" alt="icono-informacion">
+                    </div>
+                    <div class="texto-secundario">
+                        <p class="texto-registro">Para registrar un usuario, debes hacerlo desde el cliente SAMP/Open.mp</p>
+
+                    </div>
                     <button type="button" btn-reg-cl class="btn-secundario">Cerrar</button>
                     
                 </div>
@@ -57,7 +79,38 @@
 
 
             <section class="galeria-servidor">
-                                
+                <div class="carrusel">
+                    <div class="carrusel__contenedor">
+                        <div class="carrusel__item activo">
+                            <img src="src/img/galeria/portada.webp" alt="Imagen portada">
+                            <div class="carrusel__info">
+                                <h2>Bienvenido!</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae iusto ad quae unde pariatur excepturi asperiores tempora, nihil non alias nemo delectus doloremque quis nam ratione et eligendi quisquam nisi!</p>
+                            </div>
+                        </div>
+                        <div class="carrusel__item">
+                            <img src="src/img/galeria/1.webp" loading="lazy" alt="Imagen 2">
+                            <div class="carrusel__info">
+                                <h2>Averiado?</h2>
+                                <p>No hay problema, siempre podrás llamar a la grúa o bien, acercar tu vehiculo a los talleres de auto reparación.</p>
+                            </div>
+                        </div>
+                        <div class="carrusel__item">
+                            <img src="src/img/galeria/2.webp" loading="lazy" alt="Imagen 3">
+                            <div class="carrusel__info">
+                                <h2>No hay doctores?</h2>
+                                <p>Si no te molesta automedicarte, puedes ir a una farmacia y comprar medicamentos. Ojo: No te curaras completamente, pero te dara tiempo para encontrar a un doctor.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botones -->
+                    <button class="carrusel__btn prev" aria-label="Imagen anterior">‹</button>
+                    <button class="carrusel__btn next" aria-label="Imagen siguiente">›</button>
+
+                    <!-- Indicadores -->
+                    <div class="carrusel__indicadores"></div>
+                </div>             
                     
             
             </section>
@@ -104,21 +157,21 @@
 
                 </div>
                 <div class="seguirnos">
-                    <h4 class="_bold-600">
+                    <h4 class="bold-600">
                         Siguenos en:
                     </h4>
-                    <div class="_follow_us">
-                        <a href="#" class="_icon">
-                            <img loading="lazy" src="/src/icons/youtube.png" alt="yt icon" class="_icon">
+                    <div class="redes-sociales">
+                        <a href="#" class="">
+                            <img loading="lazy" src="/src/icons/youtube.png" alt="yt icon" class="rrss-icon">
                         </a>
                         <a href="#" class="_icon">
-                            <img loading="lazy" src="/src/icons/facebook.png" alt="fb icon" class="_icon">
+                            <img loading="lazy" src="/src/icons/facebook.png" alt="fb icon" class="rrss-icon">
                         </a>
                         <a href="#" class="_icon">
-                            <img loading="lazy" src="/src/icons/tik-tok.png" alt="tt icon" class="_icon">
+                            <img loading="lazy" src="/src/icons/tik-tok.png" alt="tt icon" class="rrss-icon">
                         </a>
                         <a href="#" class="_icon">
-                            <img loading="lazy" src="/src/icons/twitter.png" alt="tw icon" class="_icon">
+                            <img loading="lazy" src="/src/icons/twitter.png" alt="tw icon" class="rrss-icon">
                         </a>
                         
                         

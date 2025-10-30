@@ -6,13 +6,19 @@
 
     &-general{
         display: flex;
-
-        background-color: v.$primario;
-        color: white;
-
+        width: 80%;
         height: 3rem;
+        margin: 0 auto;
         a{
             color: white;
+
+            &:hover
+            {
+                color: v.$secundario;
+                cursor: pointer;
+                font-weight: bold;
+                
+            }
         }
 
         .barra{
@@ -25,13 +31,18 @@
         }
     
     }
-    &-izquierda{
-       
-    }
+    
 
     &-principal{
         display: flex;
+        align-items: center;
         gap: 1rem;
+
+        a{
+            display: flex;
+            align-items: center;
+            line-height: 1;
+        }
     }
     
 }

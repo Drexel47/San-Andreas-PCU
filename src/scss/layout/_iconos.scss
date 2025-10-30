@@ -1,0 +1,41 @@
+@use '../base/variables' as v;
+
+
+/* ambos iconos ocupan el mismo espacio */
+.icono {
+  width: 2.2rem;
+  height: 2.2rem;
+  stroke: currentColor;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+  transition:
+    transform 0.5s cubic-bezier(0.65, 0, 0.35, 1),
+    opacity 0.3s ease;
+}
+
+/* modo claro activo */
+.icono-sol {
+  opacity: 1;
+  transform: translate(-50%, -50%) translateX(0);
+}
+
+/*inicialmente escondida a la izquierda */
+.icono-luna {
+  transform: translate(-50%, -50%) translateX(-40px);
+  opacity: 0;
+}
+
+/* cuando se activa el modo oscuro... */
+body.dark-mode .icono-sol {
+  opacity: 0;
+  transform: translate(-50%, -50%) translateX(40px); /* sale hacia la derecha */
+}
+
+body.dark-mode .icono-luna {
+  opacity: 1;
+  transform: translate(-50%, -50%) translateX(0); /* entra desde la izquierda */
+}

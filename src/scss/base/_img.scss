@@ -1,6 +1,8 @@
 @use './variables' as v;
 
-._icon{
-    width: v.$img_28;
-    height: v.$img_28;
+.logo-icon,
+.rrss-icon{
+    width: 2.4rem;
+    height: 2.4rem;
 }
+

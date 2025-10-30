@@ -118,8 +118,7 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -354,19 +353,25 @@ template {
   display: none;
 }
 
-._icon {
-  width: 2.8rem;
-  height: 2.8rem;
+.logo-icon,
+.rrss-icon {
+  width: 2.4rem;
+  height: 2.4rem;
 }
 
 .nav-general {
   display: flex;
-  background-color: #3281F2;
-  color: white;
+  width: 80%;
   height: 3rem;
+  margin: 0 auto;
 }
 .nav-general a {
   color: white;
+}
+.nav-general a:hover {
+  color: #D6850E;
+  cursor: pointer;
+  font-weight: bold;
 }
 .nav-general .barra {
   display: flex;
@@ -377,7 +382,13 @@ template {
 }
 .nav-principal {
   display: flex;
+  align-items: center;
   gap: 1rem;
+}
+.nav-principal a {
+  display: flex;
+  align-items: center;
+  line-height: 1;
 }
 
 .modal {
@@ -392,11 +403,12 @@ template {
 .modal.activo {
   display: flex;
   animation: fadeIn 0.3s ease;
+  overflow-y: hidden;
 }
 .modal_contenido {
   background: #fff;
   background: #fff;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 10px;
   width: 90%;
   max-width: 400px;
@@ -407,17 +419,24 @@ template {
   font-size: 1.4rem;
 }
 
-.modal__contenido {
+.modal_contenido {
   background: #fff;
-  padding: 2rem;
   border-radius: 10px;
   width: 90%;
   max-width: 400px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   animation: slideIn 0.3s ease;
 }
-.modal__contenido p, .modal__contenido button {
-  font-size: 1.4rem;
+.modal_contenido p, .modal_contenido button {
+  font-size: 1.2rem;
+}
+.modal_contenido .titulo-secundario {
+  display: flex;
+  justify-content: center;
+}
+.modal_contenido .titulo-secundario img {
+  height: 2.4rem;
+  width: auto;
 }
 
 .campo {
@@ -438,8 +457,24 @@ input {
   gap: 1rem;
 }
 
+.modo-btn {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  padding: 0;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  margin-top: 0.1rem;
+}
+
 .btn-primario {
-  background: #007bff;
+  background: #3281F2;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -447,25 +482,294 @@ input {
   cursor: pointer;
 }
 .btn-primario:hover {
-  background: #0056b3;
+  background: #1463D4;
 }
 
 .btn-secundario {
-  background: red;
+  background: #f24332;
   width: 100%;
   border: none;
   border-radius: 5px;
   padding: 0.6rem 1rem;
   cursor: pointer;
   color: whitesmoke;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  transition: font-weight 0.4s ease;
+}
+@media (min-width: 835px) {
+  .btn-secundario {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+  }
 }
 .btn-secundario:hover {
-  background: #aaa;
+  font-weight: bold;
+  background: #f56f62;
 }
 
-.main {
+/* ambos iconos ocupan el mismo espacio */
+.icono {
+  width: 2.2rem;
+  height: 2.2rem;
+  stroke: currentColor;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.3s ease;
+}
+
+/* modo claro activo */
+.icono-sol {
+  opacity: 1;
+  transform: translate(-50%, -50%) translateX(0);
+}
+
+/*inicialmente escondida a la izquierda */
+.icono-luna {
+  transform: translate(-50%, -50%) translateX(-40px);
+  opacity: 0;
+}
+
+/* cuando se activa el modo oscuro... */
+body.dark-mode .icono-sol {
+  opacity: 0;
+  transform: translate(-50%, -50%) translateX(40px); /* sale hacia la derecha */
+}
+
+body.dark-mode .icono-luna {
+  opacity: 1;
+  transform: translate(-50%, -50%) translateX(0); /* entra desde la izquierda */
+}
+
+.carrusel {
+  position: relative;
   width: 80%;
+  aspect-ratio: 16/9;
+  margin: 2rem auto;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.carrusel__contenedor {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.carrusel__item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.carrusel__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Texto superpuesto */
+.carrusel__info {
+  position: absolute;
+  bottom: 3rem;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  /*
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  padding: 1.2rem;
+  box-sizing: border-box;
+    */
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.carrusel__info h2 {
+  padding: 0 1rem;
+}
+.carrusel__info p {
+  padding: 0 2rem;
+  height: 4rem;
+}
+
+.carrusel__item.activo .carrusel__info {
+  opacity: 1;
+}
+
+.carrusel__info h2 {
+  margin: 0;
+  font-size: 2.4rem;
+  transform: translateX(-30px);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.carrusel__item.activo .carrusel__info h2 {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.carrusel__info p {
+  margin: 0.4rem 0 0;
+  font-size: 1.2rem;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: transform 0.6s ease 0.1s, opacity 0.6s ease 0.1s;
+}
+
+.carrusel__item.activo .carrusel__info p {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Botones */
+.carrusel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  z-index: 5;
+}
+
+.carrusel__btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.carrusel__btn.prev {
+  left: 10px;
+}
+
+.carrusel__btn.next {
+  right: 10px;
+}
+
+/* Indicadores */
+.carrusel__indicadores {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.carrusel__indicadores button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.carrusel__indicadores button.activo {
+  background: #fff;
+}
+
+body {
+  width: 100%;
   margin: 0 auto;
+  background: #eaf2fe;
+  color: black;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+body.dark-mode {
+  background: #7d8ea7;
+}
+body.dark-mode li, body.dark-mode span {
+  color: #eaf2fe;
+}
+
+header {
+  background: #3281F2;
+}
+
+@media (min-width: 835px) {
+  main {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.sobre-nosotros h4, .seguirnos h4 {
+  color: #eaf2fe;
+  background: #3281F2;
+}
+
+.presentacion-servidor-video {
+  height: 36rem;
+}
+
+.server-stats, .mas-info {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 835px) {
+  .server-stats, .mas-info {
+    flex-direction: row;
+  }
+}
+.server-stats, .mas-info {
+  width: 100%;
+}
+
+.mas-info .sobre-nosotros {
+  width: 100%;
+}
+@media (min-width: 835px) {
+  .mas-info .sobre-nosotros {
+    width: 70%;
+  }
+}
+.mas-info .seguirnos {
+  width: 100%;
+}
+@media (min-width: 835px) {
+  .mas-info .seguirnos {
+    width: 30%;
+  }
+}
+.mas-info .seguirnos .redes-sociales {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.server-stats .players, .server-stats .update-log {
+  width: 100%;
+}
+@media (min-width: 835px) {
+  .server-stats .players, .server-stats .update-log {
+    width: 50%;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  font-weight: bolder;
+  text-align: center;
+  background: #3281F2;
+  color: #eaf2fe;
 }
 
 a {
@@ -483,37 +787,3 @@ main {
 li {
   list-style: none;
 }
-
-.server-stats {
-  display: flex;
-  flex-direction: row;
-}
-.server-stats .players, .server-stats .update-log {
-  width: 50%;
-}
-
-.mas-info {
-  display: flex;
-  width: 100%;
-}
-.mas-info .sobre-nosotros {
-  max-width: 60%;
-}
-.mas-info .seguirnos {
-  width: 40%;
-}
-
-.sobre-nosotros h4, .seguirnos h4 {
-  color: wheat;
-  background: #3281F2;
-}
-
-.presentacion-servidor-video {
-  height: 36rem;
-}
-
-footer {
-  background: #3281F2;
-  height: 3rem;
-  text-align: center;
-}/*# sourceMappingURL=app.css.map */
