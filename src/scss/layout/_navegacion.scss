@@ -9,8 +9,10 @@
         width: 80%;
         height: 3rem;
         margin: 0 auto;
+        font-family: 'Montserrat', 'Sans-serif';
         a{
             color: white;
+            transition: color 0.4s ease;
 
             &:hover
             {
@@ -28,6 +30,25 @@
             align-items: center;
 
             margin: 0 1rem;
+
+            .nav-izquierda
+            {
+                
+                
+                
+                .regresar
+                {
+                    display: flex;
+                    align-items: center;
+                    gap: .5rem;
+                    a{
+                        &:hover{
+                            color: v.$secundario;
+                        }
+                    }
+                }
+
+            }
         }
     
     }

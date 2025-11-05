@@ -35,7 +35,9 @@
 
                     
                     <button id="btn-darkmode" class="modo-btn" aria-label="Cambiar tema">
-                        <svg class="icono icono-sol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <img class="icono icono-sol" src="src/icons/sun.svg" alt="modo-normal">
+                        <img class="icono icono-luna" src="src/icons/moon.svg" alt="modo-oscuro">
+                        <!--<svg class="icono icono-sol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="12" r="5"/>
                             <line x1="12" y1="1" x2="12" y2="3"/>
                             <line x1="12" y1="21" x2="12" y2="23"/>
@@ -49,7 +51,7 @@
 
                         <svg class="icono icono-luna" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 12.79A9 9 0 0 1 11.21 3 7 7 0 1 0 21 12.79z"/>
-                        </svg>
+                        </svg>-->
                     </button>
                     
                 </nav>  
@@ -72,7 +74,7 @@
                         <p class="texto-registro">Para registrar un usuario, debes hacerlo desde el cliente SAMP/Open.mp</p>
 
                     </div>
-                    <button type="button" btn-reg-cl class="btn-secundario">Cerrar</button>
+                    <button type="button" btn-reg-cl class="btn-secundario btn-cerrar">Cerrar</button>
                     
                 </div>
             </div>
@@ -105,8 +107,12 @@
                     </div>
 
                     <!-- Botones -->
-                    <button class="carrusel__btn prev" aria-label="Imagen anterior">‹</button>
-                    <button class="carrusel__btn next" aria-label="Imagen siguiente">›</button>
+                    <button class="carrusel__btn prev" aria-label="Imagen anterior">
+                        <img src="/src/icons/circle-chevron-left.svg" class="btn-icon">
+                    </button>
+                    <button class="carrusel__btn next" aria-label="Imagen siguiente">
+                        <img src="/src/icons/circle-chevron-right.svg" class="btn-icon">
+                    </button>
 
                     <!-- Indicadores -->
                     <div class="carrusel__indicadores"></div>
@@ -116,10 +122,14 @@
             </section>
             <section class="presentacion-servidor">
                 
-                <div class="presentacion-servidor-video">
-                    <lite-youtube videoid="tgbNymZ7vqY"></lite-youtube>
-                    
-
+                <div class="presentacion-servidor-container">
+                    <div class="subtext bold-600">
+                        <span>Videos destacados</span>
+                    </div>
+                    <div class="videos-destacados">
+                        <iframe width="560" height="315" loading="lazy" src="https://www.youtube-nocookie.com/embed/68hRty6dMbo?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen> </iframe>
+                        <iframe width="560" height="315" loading="lazy" src="https://www.youtube-nocookie.com/embed/68hRty6dMbo?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen> </iframe>
+                    </div>
                 </div>
 
 
@@ -158,7 +168,7 @@
                 </div>
                 <div class="seguirnos">
                     <h4 class="bold-600">
-                        Siguenos en:
+                        Siguenos
                     </h4>
                     <div class="redes-sociales">
                         <a href="#" class="">
@@ -186,7 +196,7 @@
 
 
     </main>
-    <footer class="footer _bold">
+    <footer class="footer">
         <span>Todos los derechos reservados. 2024</span>
     </footer>
    <!--Scripts-->

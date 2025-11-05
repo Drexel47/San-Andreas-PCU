@@ -91,8 +91,9 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.4);
-  color: #fff;
+  //background: rgba(0, 0, 0, 0.4);
+  //color: #fff;
+  background: transparent;
   border: none;
   font-size: 2rem;
   padding: 0.4rem 0.8rem;
@@ -102,7 +103,12 @@
   z-index: 5;
 }
 
-.carrusel__btn:hover { background: rgba(0, 0, 0, 0.7); }
+.carrusel__btn:hover { 
+  background: rgba(0, 0, 0, 0.7);
+  img{
+    filter: brightness(0) saturate(100%) invert(100%) sepia(37%) saturate(2025%) hue-rotate(182deg) brightness(114%) contrast(81%);
+  }
+}
 
 .carrusel__btn.prev { left: 10px; }
 .carrusel__btn.next { right: 10px; }

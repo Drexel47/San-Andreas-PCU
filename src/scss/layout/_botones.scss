@@ -17,6 +17,12 @@
   overflow: hidden;
 
   margin-top: .1rem;
+  
+  transition: filter 0.5s ease-in-out;
+  &:hover
+  {
+    filter: brightness(0) saturate(100%) invert(79%) sepia(51%) saturate(727%) hue-rotate(327deg) brightness(98%) contrast(96%);
+  }
 }
 
 //Botones genericos
@@ -33,7 +39,7 @@
 }
 
 .btn-secundario {
-    background: v.$rojo_sec;
+    
     width: 100%;
     border: none;
     border-radius: 5px;
@@ -54,8 +60,22 @@
       width: 50%;
       
     }
-    &:hover { 
-        font-weight: bold;
-        background: v.$rojo_sec1; 
-    }
+   
+}
+.btn-cerrar
+{
+  background: v.$rojo_sec;
+  &:hover
+  {
+    font-weight: bold;
+    background: v.$rojo_sec1;
+  }
+}
+.btn-entrar
+{
+  background: v.$secundarioClaro2;
+  &:hover{
+    background: v.$secundario;
+  }
+
 }

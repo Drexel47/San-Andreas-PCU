@@ -12,56 +12,86 @@
     <!--Pricedown-->
     <link href="https://fonts.cdnfonts.com/css/pricedown" rel="stylesheet">
     <!--SCSS/CSS-->
-    <link rel="stylesheet" href="/build/css/app.css">
+    <link rel="stylesheet" href="/src/scss/app.css">
     
 </head>
-<body class="login">
+<body class="main login">
     <header class="header">
-        <div class="nav2 contenido-header">
+        <nav class="nav-general contenido-header">
             <div class="barra">
-                <div class="izquierda">
-                    <a class="regresar" href="/index.html"><img src="/src/icons/arrow-left1.svg" alt="icono_izq" class="_icon _svg-blanco">Volver al Inicio</a>
-                </div>
-            </div> 
-        </div>
-    </header>
-    <main class="_login">
-        <section class="login-form">
-            <div class="_login-form">
-                <h4 class="txt-shw _login-color">Ingresa</h4>
-                <form class="formulario" action="validar_user.php" method="post">
-                    <fieldset>
-                            
-                        <div class="contenedor-campos">
-                            <div class="campo">
-                                <label class="_form-title txt-shw">Nombre</label>
-                                <input class="input-text" type="text" id="usuario" name="usuario" placeholder="Nombre_Apellido" required>
-                            </div>
-                            <div class="campo">
-                                <label class="_form-title txt-shw">Contraseña</label>
-                                <input class="input-text" type="password" name="log_password" value="" placeholder="Contraseña" required>
-                                
-                            </div>
-                        </div>
-                        <input class="_boton" type="submit" name="log_user" value="Entrar"> 
-                    </fieldset>
-                               
-                </form>
-                <div class="form-options _login-color">
-                    <div class="_form-options  _bold-600">
-                        <a class="_account recovery-account" href="recovery.html">¿Olvidaste la contraseña?</a>
-                        <span class="_account _bold-600">¿No tienes cuenta?<a href="/pages/registrar.html" class="_account-login">Click Aquí</a></span>
-                    </div>
+                <div class="nav-izquierda">
+                    
+                    <a class="regresar" href="/index.html">
+                        <img class="icon" src="/src/icons/arrow-left.svg">
+                        <span>Regresa al Inicio</span>
+                    </a>
+                    
                     
                 </div>
 
+                
+                <nav class="nav-principal">
+                    
+                       
+
+                    
+                    <button id="btn-darkmode" class="modo-btn" aria-label="Cambiar tema">
+                        <img class="icono icono-sol" src="/src/icons/sun.svg" alt="modo-normal">
+                        <img class="icono icono-luna" src="/src/icons/moon.svg" alt="modo-oscuro">
+                    </button>
+                    
+                </nav>  
+                
+                
+               
+    
+            </div>
+        </nav>  
+ 
+    </header>
+    <main class="login-main">
+        
+        <div class="login-form">
+            <h4 class="login-form-color">Ingresa</h4>
+            <div class="login-form-container">
+                
+                    <form class="formulario" action="validar_user.php" method="post">
+                        <fieldset>
+                                    
+                            <div class="contenedor-campos">
+                                <div class="campo">
+                                    <label class="_form-title txt-shw">Nombre</label>
+                                    <input class="input-text" type="text" id="usuario" name="usuario" placeholder="Nombre_Apellido" required>
+                                </div>
+                                <div class="campo">
+                                <label class="_form-title txt-shw">Contraseña</label>
+                                    <input class="input-text" type="password" name="log_password" value="" placeholder="Contraseña" required>
+                                        
+                                </div>
+                            </div>
+                            <input class="btn-secundario btn-entrar" type="submit" name="log_user" value="Entrar"> 
+                        </fieldset>
+                                    
+                    </form>
+                    <div class="login-options">
+                            <div class="user-options  bold-600">
+                                <a class="recovery-account" href="recovery.html">¿Olvidaste la contraseña?</a>
+                                <span class="bold-600">¿No tienes cuenta?<a href="#" class="register-info">Mas info...</a></span>
+                            </div>
+                            
+                    </div>
+                
             </div>
 
-        </section>
+        </div>
+
+        
 
     </main>
     <footer class="footer">
         <span>Todos los derechos reservados. 2024</span>
     </footer>
+
+    <script src="/src/js/app.js"></script>
 </body>
 </html>

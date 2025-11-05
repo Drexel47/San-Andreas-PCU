@@ -19,4 +19,24 @@ li{
 }
 
 
+section{
+    font-family: 'Montserrat', sans-serif;
+    &>div
+    {
+        
 
+        h4{
+        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: v.$primario;
+            color: v.$secundarioClaro;
+            height: 3rem;
+        }
+
+    }
+    &:last-child{
+        margin-bottom: 2rem;
+    }
+}
