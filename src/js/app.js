@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
-    eventListeners();
+    //eventListeners();
     modoOscuro();
     Carrusel();
 });

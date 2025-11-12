@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes zoom-1 {
   0% {
     transform: scale(1);
@@ -355,7 +356,8 @@ template {
 }
 
 .logo-icon,
-.rrss-icon {
+.rrss-icon,
+.icon {
   width: 2.4rem;
   height: 2.4rem;
 }
@@ -400,6 +402,9 @@ template {
   display: flex;
   align-items: center;
   line-height: 1;
+}
+.nav-pcu {
+  display: flex;
 }
 
 .modal {
@@ -733,6 +738,76 @@ body.dark-mode .icono-luna {
   font-family: "Montserrat", "sans-serif";
 }
 
+.menu-movil img {
+  display: none;
+}
+
+.user-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-pcu {
+  background: white;
+}
+
+.nav-item {
+  border: 1px solid gray;
+  padding: 0 1rem;
+  width: 15%;
+  height: 3rem;
+}
+.nav-item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-family: "Montserrat", "Sans-serif";
+  color: grey;
+}
+
+.pcu_user_container {
+  display: flex;
+}
+
+.progress {
+  height: 1rem;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.user_name_title {
+  font-size: 2.4rem;
+  margin: 1.8rem auto;
+}
+.user_health_armor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 20rem;
+}
+.user-health, .user-armor {
+  height: 100%;
+}
+.user-health {
+  background: red;
+}
+.user-armor {
+  background: grey;
+}
+.user_misc {
+  display: flex;
+}
+.user_misc ul {
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%; /* 62.5% de 16px = 10px → 1rem = 10px */
+}
+
 body {
   width: 100%;
   margin: 0 auto;
@@ -745,6 +820,12 @@ body.dark-mode {
 }
 body.dark-mode li, body.dark-mode span, body.dark-mode .subtext span {
   color: #eaf2fe;
+}
+body.dark-mode .nav-item {
+  border: 1px solid grey;
+}
+body.dark-mode .nav-item a {
+  color: grey;
 }
 
 header {

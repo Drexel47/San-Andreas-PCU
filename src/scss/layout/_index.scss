@@ -4,6 +4,7 @@
 @forward 'iconos';
 @forward 'carrusel';
 @forward 'login';
+@forward 'pcu';
 
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
@@ -27,6 +28,16 @@ body{
 
         li, span, .subtext span{
             color: v.$secundarioClaro;
+        }
+
+        .nav-item
+        {
+            
+            border: 1px solid grey;
+            a
+            {
+                color: grey;
+            }
         }
 
     }

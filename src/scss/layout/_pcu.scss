@@ -1,0 +1,90 @@
+@use '../base/variables' as v;
+.menu-movil{
+    img{
+        display: none;
+    }
+}
+
+
+.user{
+
+    &-options{
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+.nav-pcu{
+    background: white;
+
+}
+.nav-item{
+    border: 1px solid gray;
+    padding: 0 1rem;
+    width: 15%;
+    height: 3rem;
+    a{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 1.8rem;
+
+        font-family: 'Montserrat', 'Sans-serif';
+
+        color: grey;
+    }
+
+}
+.pcu{
+
+
+    &_user_container{
+        display: flex;
+
+
+
+
+    }
+}
+
+.progress{
+    height: 1rem;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.user{
+    &_name_title{
+        font-size: 2.4rem;
+
+        margin: 1.8rem auto;
+    }
+    &_health_armor{
+        display: flex;
+        flex-direction: column;
+        gap: .8rem;
+        width: 20rem;
+    }
+    &-health,
+    &-armor{
+        height: 100%;
+    }
+    &-health{
+        background: red; 
+    }
+    &-armor{
+        background: grey;
+    }
+
+    &_misc{
+        display: flex;
+
+        ul{
+            padding: 0;
+        }
+    }
+}
