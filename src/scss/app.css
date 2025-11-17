@@ -742,6 +742,19 @@ body.dark-mode .icono-luna {
   display: none;
 }
 
+.user-money, .licencias, .propiedades {
+  border-top: 1px solid #3281F2;
+}
+
+.user-options .nav-item a:hover {
+  color: #D6850E;
+}
+
+.pcu .user-info,
+.pcu .informacion-ooc {
+  border-top: 1px solid #3281F2;
+}
+
 .user-options {
   display: flex;
   justify-content: center;
@@ -802,6 +815,100 @@ body.dark-mode .icono-luna {
 }
 .user_misc ul {
   padding: 0;
+}
+
+.contenedor-ventajas,
+.otras-ventajas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.contenedor-ventajas .item,
+.otras-ventajas .item {
+  gap: 1rem;
+  width: 25%;
+  margin: 0.8rem;
+}
+
+.vip-type {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.vip-type h5 {
+  width: 30%;
+}
+.vip-type p {
+  width: 30%;
+}
+
+.user-money {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 1.8rem auto;
+}
+.user-money h4 {
+  color: black;
+  background: transparent;
+}
+.user-money .item {
+  display: block;
+}
+
+.section-title h4 {
+  justify-content: flex-start;
+  padding-left: 1rem;
+}
+.section-title h4:first-of-type {
+  color: white;
+  background: #3281F2;
+  height: 3rem;
+  width: 25%;
+  margin: 0;
+}
+
+.user-info .informacion-general,
+.informacion-ooc .informacion-general {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0.8rem;
+}
+.user-info .informacion-general .item,
+.informacion-ooc .informacion-general .item {
+  text-align: center;
+}
+
+.propiedades-contenedor {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.propiedades-contenedor .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.licencias-contenedor,
+.informacion-ooc-contenedor {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(5, 1fr);
+}
+.licencias-contenedor .item,
+.informacion-ooc-contenedor .item {
+  padding: 1rem;
+  text-align: center;
+}
+
+.section-subtitle {
+  background: transparent;
+  color: #3281F2;
 }
 
 html {

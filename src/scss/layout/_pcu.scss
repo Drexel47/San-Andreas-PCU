@@ -4,7 +4,37 @@
         display: none;
     }
 }
+.user-money, .licencias, .propiedades{
+    border-top: 1px solid v.$primario;
+}
+.user-options{
+    .nav-item{
+        a{
+            &:hover{
+                color: v.$secundario;
+            }
 
+        }
+
+    }
+    
+        
+    
+}
+.pcu{
+
+    
+
+    .user-info,
+    .informacion-ooc
+    {
+        border-top: 1px solid v.$primario;
+        
+
+    }
+        
+    
+}
 
 .user{
 
@@ -88,3 +118,125 @@
         }
     }
 }
+
+
+.contenedor-ventajas,
+.otras-ventajas{
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    .item{
+        gap: 1rem;
+        width: 25%;
+        margin: .8rem;
+
+    }
+}
+
+.vip-type
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    h5{
+        width: 30%;
+    }
+    p{
+        width: 30%;
+    }
+
+}
+
+.user-money{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+    margin: 1.8rem auto;
+    h4{
+        color: black;
+        background: transparent;
+    }
+    .item{
+        display: block;
+        
+    }
+}
+
+.section-title
+{
+    h4{
+        justify-content: flex-start;
+        padding-left: 1rem;
+        &:first-of-type{
+            color: white;
+            background: v.$primario;
+            height: 3rem;
+            width: 25%;
+
+            margin: 0;
+        }
+    }
+
+}
+
+.user-info,
+.informacion-ooc{
+    
+    
+    
+    
+    .informacion-general{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(4, 1fr);
+        margin: .8rem;
+        .item{
+            
+            text-align: center;
+        }
+    }
+}
+
+
+.propiedades-contenedor{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+.licencias,
+.informacion-ooc
+{
+    
+    &-contenedor{
+
+        display: grid;
+        gap: .8rem;
+        grid-template-columns: repeat(5, 1fr);
+        .item{
+            padding: 1rem;
+            text-align: center;
+        }
+    }
+    
+}
+
+.section-subtitle{
+    background: transparent;
+    color: v.$primario;
+}
+
