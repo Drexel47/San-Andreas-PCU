@@ -2,20 +2,23 @@ document.addEventListener('DOMContentLoaded', function(){
     //eventListeners();
     modoOscuro();
     Carrusel();
+    ModalRegistro();
 });
 
-
+/*
 function eventListeners(){
     const mobileMenu = document.querySelector('.menu-movil');
     if(mobileMenu) mobileMenu.addEventListener('click', navegacionResponsive);
 
     ModalRegistro();
-}
+}*/
 
 
 function ModalRegistro() {
     const botonesAbrir = document.querySelectorAll('[btn-reg-op]');
     const botonesCerrar = document.querySelectorAll('[btn-reg-cl]');
+    if(!botonesAbrir && !botonesCerrar) return;
+    
 
     botonesAbrir.forEach(boton => {
         boton.addEventListener('click', e => {
@@ -76,6 +79,7 @@ function Carrusel()
     const nextBtn = carrusel.querySelector('.next');
     const indicadoresCont = carrusel.querySelector('.carrusel__indicadores');
 
+    if(!carrusel) return;
     let indiceActual = 0;
     let intervalo;
 
